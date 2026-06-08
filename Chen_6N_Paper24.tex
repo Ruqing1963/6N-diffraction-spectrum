@@ -1,0 +1,155 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+\geometry{margin=1in}
+
+\title{\Large \textbf{The Quasi-Periodic Diffraction Spectrum\\ of Twin-Pair Correlation on the $6N$ Skeleton}}
+\author{Ruqing Chen\\
+\small GUT Geoservice Inc., Montreal, Quebec, Canada\\
+\small \texttt{ruqing@hotmail.com}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Parts XX--XXII derived, in closed form, the spatial correlation of twin centres on
+the $6N$ skeleton as an infinite product $R(j)=\prod_{q>3}R_q(j)$ of quantized
+single-frequency interference factors. This paper renders that closed form
+directly: evaluating the three interference states across the spatial-frequency
+spectrum produces a two-panel \emph{diffraction spectrum} of the lattice---a
+heat map of the single-frequency tensor $R_q(j)$ and the cumulative correlation
+$R(j)$. The picture makes three established analytic facts legible at a glance:
+the $O(1/q^2)$ decay of high-frequency amplitude (so low primes dominate the
+structure); the maximal two-body \emph{suppression} at $j=1$, where the cumulative
+product falls to $R(1)=\mathfrak{S}_{\rm quad}/\mathfrak{S}_{\rm twin}^2\approx0.41$
+(strictly positive---a suppressed but admissible quadruplet, \emph{not}
+annihilation); and the multi-frequency \emph{super-resonance} at $j=35=5\cdot7$,
+where State~A fires at both $q=5$ and $q=7$ and $R(35)\approx2.26$. The rendering
+is an illustration of the analytic $R(j)$, equal at integer lags to the discrete
+singular-series ratio; it is not new prime data.
+\end{abstract}
+
+\section{Introduction}
+In Parts XX through XXII, we established that the spatial correlation between twin
+centres at distance $j$ is not random but is governed by a circular convolution of
+castellated indicators on the phase-space tori, with the global correlation given
+by the absolutely convergent product $R(j)=\prod_{q>3}R_q(j)$ and a finite spectral
+cutoff $k^\star(\varepsilon)$~\cite{ChenXX,ChenXXI,ChenXXII}.
+
+In this paper we render that closed-form correlation visually. Plotting the tensor
+of single-frequency interference states and their cumulative product yields the
+``diffraction spectrum'' of the lattice---a compact way to read off the
+small-prime dominance, the suppression and resonance lags, and the quasi-periodic
+structure that the analytic results predict.
+
+\section{The Tensor Construction}
+
+We construct the single-frequency interference tensor $\mathbf{R}=[R_q(j)]$ for
+twin--twin correlation. Following the exact convolution states of
+Part~XX~\cite{ChenXX}, each entry takes one of three values according to the
+shift $j$ and frequency $q$:
+\begin{enumerate}
+    \item \textbf{State A (Constructive Resonance):} $R_q(j) = \frac{q}{q-2}$ when $j \equiv 0 \pmod q$.
+    \item \textbf{State B (Partial Interference):} $R_q(j) = \frac{q(q-3)}{(q-2)^2}$ when $j \equiv \pm 3^{-1} \pmod q$.
+    \item \textbf{State C (Destructive Misalignment):} $R_q(j) = \frac{q(q-4)}{(q-2)^2}$ for all other $j$.
+\end{enumerate}
+
+\section{Holographic Rendering and Phenomenological Verification}
+
+We render this tensor as a two-panel interferogram (Figure~\ref{fig:hologram}),
+showing both the single-frequency spectral map and the cumulative correlation
+$R(j)$. The picture illustrates---it does not independently prove---three features
+established analytically in earlier parts:
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{fig_lattice_diffraction.pdf}
+\caption{The diffraction spectrum of twin-pair correlation (closed-form $R(j)$,
+\emph{not} prime data). (A) Heat map of the single-frequency amplitudes $R_q(j)$;
+State~A (constructive, $q\mid j$) cells are circled, and amplitude fades as
+$O(1/q^2)$ down the frequency axis. (B) The cumulative correlation
+$R(j)=\prod_q R_q(j)$: maximal two-body suppression at $j=1$
+($R=\mathfrak{S}_{\rm quad}/\mathfrak{S}_{\rm twin}^2\approx0.41>0$) and
+super-resonance at $j=35=5\cdot7$ ($R\approx2.26$), about a baseline of $1$.}
+\label{fig:hologram}
+\end{figure}
+
+\subsection{Spectral decay}
+Reading the heat map (Figure~\ref{fig:hologram}A) down the frequency axis
+(increasing $q$), the colour fades rapidly toward neutrality ($R_q\approx1$). This
+illustrates the absolute-convergence result of Part~XXII~\cite{ChenXXII}: away from
+its finitely many resonances each frequency sits in State~C with deviation
+$4/(q-2)^2=O(1/q^2)$, so the macroscopic structure of $R(j)$ is dominated by the
+lowest frequencies ($q\le13$) while the high-frequency tail contributes a small,
+summable correction.
+
+\subsection{Maximal suppression at $j=1$}
+At $j=1$---two twin centres one step apart, i.e.\ a prime quadruplet---no prime is
+in a constructive state: State~A needs $q\mid1$ and State~B needs $q\mid(3\mp1)$,
+both impossible for $q>3$, so \emph{every} frequency sits in State~C. The
+cumulative product therefore reaches its minimum, $R(1)\approx0.41$, below even the
+single-frequency floor $R_5(1)=5/9\approx0.556$.
+
+This is the point most easily misread, so we state it carefully. $R(1)\approx0.41$
+is a \emph{suppression}, not an annihilation: it is strictly positive, and equals
+exactly the quadruplet prefactor
+$R(1)=\mathfrak{S}_{\rm quad}/\mathfrak{S}_{\rm twin}^2$, the intercept-suppression
+identified in Part~XX~\cite{ChenXX}. The quadruplet is an admissible constellation
+with positive density; the dip merely says two adjacent twins are
+\emph{anti-correlated} relative to independence. Genuine zero-measure annihilation
+($R=0$) requires the dead-residue sets to \emph{tile} $\mathbb{Z}/q$, which a
+twin pair can never achieve---the twin is immune to two-body annihilation, and the
+lowest order at which annihilation occurs is three-body (Part~XXI)~\cite{ChenXXI}.
+The $j=1$ trough is thus the deepest \emph{constructive-free} suppression, not a
+collapse to zero.
+
+\subsection{Multi-frequency super-resonance at $j=35$}
+At $j=35=5\cdot7$, State~A (constructive, $R_q=q/(q-2)$) fires simultaneously at
+$q=5$ and $q=7$, since both divide $35$. Their factors $\tfrac53$ and $\tfrac75$
+multiply against an otherwise near-neutral tail, lifting the cumulative product to
+its maximum in the window, $R(35)\approx2.26$. This is the constructive mirror of
+the $j=1$ trough: a lag whose small-prime structure aligns the dead-residue sets
+of the two centres rather than scattering them. Such resonances recur whenever $j$
+is divisible by several small primes (the quasi-periodicity of $R(j)$).
+
+\section{Conclusion}
+Rendering the single-frequency tensor $R_q(j)$ and its cumulative product $R(j)$
+makes the closed-form results of Parts~XX--XXII legible in one picture: a
+quasi-periodic, small-prime-dominated correlation that behaves like a
+multi-frequency diffraction pattern, with anti-correlated suppression troughs (the
+deepest at $j=1$, the quadruplet prefactor $\mathfrak{S}_{\rm quad}/
+\mathfrak{S}_{\rm twin}^2\approx0.41>0$) and constructive resonances (the strongest
+here at $j=35=5\cdot7$, $R\approx2.26$). The rendering is an illustration of the
+analytic correlation, equal at integer lags to the discrete singular-series ratio;
+it adds no new prime data and makes no claim about the infinitude of any
+constellation.
+
+\paragraph{Data and code availability.}
+The figure-generating script is openly available at
+\url{https://github.com/Ruqing1963/6N-diffraction-spectrum}~\cite{repo}.
+
+\begin{thebibliography}{9}
+\bibitem{ChenXX} R.~Chen, \emph{The circular convolution of prime constellations
+in congruence phase space} (Part~XX), Zenodo, doi:10.5281/zenodo.20583994 (2026).
+\bibitem{ChenXXI} R.~Chen, \emph{The irreducible three-body congruence correlation
+and the annihilation lattice} (Part~XXI), Zenodo, doi:10.5281/zenodo.20584909 (2026).
+\bibitem{ChenXXII} R.~Chen, \emph{Multidimensional tensor convolution and the
+spectral cutoff of lattice transitions} (Part~XXII), Zenodo,
+doi:10.5281/zenodo.20585074 (2026).
+\bibitem{Review} R.~Chen, \emph{Arithmetic geodynamics on the $6N$ skeleton: a
+review of Parts I--XIX}, Zenodo, doi:10.5281/zenodo.20585301 (2026).
+\bibitem{repo} R.~Chen, \emph{The quasi-periodic diffraction spectrum of twin-pair
+correlation on the $6N$ skeleton} (Part~XXIV),
+\url{https://github.com/Ruqing1963/6N-diffraction-spectrum} (2026).
+\end{thebibliography}
+
+\end{document}
